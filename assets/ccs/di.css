@@ -494,3 +494,14 @@ main .recent-orders a{
     width: 100%;
 }
 
+.right-section .recordatorios .notificaciones .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+}
+
+.right-section .recordatorios .notificaciones.deactive .icon{
+    background-color: var(--color-danger);
+}
