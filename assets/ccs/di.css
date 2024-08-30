@@ -485,3 +485,12 @@ main .recent-orders a{
 .right-section .recordatorios .notificaciones:hover{
     box-shadow: none;
 }
+
+.right-section .recordatorios .notificaciones .contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
