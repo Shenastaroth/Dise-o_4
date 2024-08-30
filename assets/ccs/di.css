@@ -580,6 +580,82 @@ main .recent-orders a{
    main table tbody tr td:last-child,
     main table tbody tr td:first-child{
         display: none;
-   }
+   }  
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0 var(--padding-1);
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: MostrarMenu 0.4s ease forwards;
+    }
+    @keyframes MostrarMenu {
+        to{
+            left: 0;
+        }
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
     
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+    
+    main .graficos .cuadro{
+        flex-basis: 35%;
+    }
+
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    main .recent-orders table{
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
 }
