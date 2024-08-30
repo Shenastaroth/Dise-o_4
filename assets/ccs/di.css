@@ -505,3 +505,75 @@ main .recent-orders a{
 .right-section .recordatorios .notificaciones.deactive .icon{
     background-color: var(--color-danger);
 }
+
+.right-section .recordatorios .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .recordatorios .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .recordatorios .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .graficos .cuadro{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders{
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 23vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+   }
+    
+}
