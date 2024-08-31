@@ -18,7 +18,21 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
     //aqui termina la configuracion del modo oscuro y viceversa
+
+    const isDarkMode = document.body.classList.contains('dark-mode-variables');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+     // Guardar preferencia en localStorage
 })
+
+// Aplicar la preferencia de modo oscuro al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+    const darkModePreference = localStorage.getItem('darkMode');
+    if (darkModePreference === 'enabled') {
+        document.body.classList.add('dark-mode-variables');
+        darkModeToggle.querySelector('span:nth-child(1)').classList.remove('active');
+        darkModeToggle.querySelector('span:nth-child(2)').classList.add('active');
+    }
+});
 
 Orders.forEach(order => {
     const tr = document.createElement('tr');
