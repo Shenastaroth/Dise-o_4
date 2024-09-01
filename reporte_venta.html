@@ -74,7 +74,21 @@
         <!-- ========Contenido Main ======== -->
         <main>
             <h1>Reporte de Ventas</h1>
-            <!-- Aquí puedes agregar el contenido específico para el reporte de ventas -->
+                <!-- Tabla de reporte de ventas -->
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Nombre de Usuario</th>
+                                <th>País</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas se agregarán dinámicamente con Java -->
+                        </tbody>
+                    </table>
         </main>
         <!-- ========Final del contenido main ======== -->
 
@@ -99,41 +113,6 @@
                 </div>
             </div>
             <!-- ========Fin de la navegación ======== -->
-
-            <main>
-            
-                <!-- Barra de búsqueda -->
-                <input type="text" id="searchInput" placeholder="Buscar por nombre o país..." onkeyup="searchTable()">
-            
-                <!-- Tabla de reporte de ventas -->
-                <div class="recent-orders">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Nombre de Usuario</th>
-                            <th>País</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Juan</td>
-                            <td>Pérez</td>
-                            <td>juanperez</td>
-                            <td>España</td>
-                        </tr>
-                        <tr>
-                            <td>Maria</td>
-                            <td>García</td>
-                            <td>mariagarcia</td>
-                            <td>Argentina</td>
-                        </tr>
-                        <!-- Agrega más filas según sea necesario -->
-                    </tbody>
-                </table>
-            </main>
-            
             <!-- Aquí puedes agregar widgets o información adicional -->
         </div>
     </div>
