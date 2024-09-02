@@ -1,6 +1,6 @@
-// Ejemplo de código JavaScript para agregar filas a la tabla
 document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.querySelector('.recent-orders tbody');
+    console.log('Table body:', tableBody); // Verifica si el selector está devolviendo el elemento correcto
 
     const rows = [
         ['Juan', 'Pérez', 'juanperez', 'España'],
