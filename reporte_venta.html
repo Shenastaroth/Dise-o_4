@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de Ventas</title>
+    <title>Reporte de ventas</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -44,12 +44,12 @@
                     <h3>Productos</h3>
                 </a>
 
-                <a href="#">
+                <a href="venta.html">
                     <span class="material-icons-sharp">real_estate_agent</span>   
                     <h3>Ventas</h3>
                 </a>
 
-                <a href="reporte-ventas.html" class="active">
+                <a href="reporte_venta.html" class="active">
                     <span class="material-icons-sharp">report</span>   
                     <h3>Reporte de Ventas</h3>
                 </a>
@@ -73,7 +73,7 @@
 
         <!-- ========Contenido Main ======== -->
         <main>
-            <h1>Reporte de Ventas</h1>
+            <h2>Reporte de Ventas</h2>
                 <!-- Tabla de reporte de ventas -->
                 <div class="recent-orders">
                     <table>
@@ -89,10 +89,11 @@
                             <!-- Las filas se agregarán dinámicamente con Java -->
                         </tbody>
                     </table>
+                </div> <!-- Cierre de la clase recent-orders -->
         </main>
         <!-- ========Final del contenido main ======== -->
 
-        <!-- ========Seccion derecho ======== -->
+        <!-- ========Seccion derecha ======== -->
         <div class="right-section">
             <div class="nav">
                 <button id="menu-btn">
@@ -115,9 +116,10 @@
             <!-- ========Fin de la navegación ======== -->
             <!-- Aquí puedes agregar widgets o información adicional -->
         </div>
-    </div>
-    </div> 
+    </div> <!-- Cierre del div container --> 
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/tabla1.js"></script>
+    <script src="assets/js/orders.js"></script>
 </body>
 </html>
