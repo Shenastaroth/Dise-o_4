@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--DataTable--> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.bootscrap5.min.css" />
     <link rel="stylesheet" href="assets/ccs/di.css">
 </head>
 <body>
@@ -75,20 +77,21 @@
         <main>
             <h2>Reporte de Ventas</h2>
                 <!-- Tabla de reporte de ventas -->
-                <div class="recent-orders">
+                <div class="recent-orders my-4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <table>
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Nombre de Usuario</th>
-                                <th>Detalle</th>
+                                <th>#</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Las filas se agregarán dinámicamente con Java -->
                         </tbody>
                     </table>
+                </div>
+                </div>
                 </div> <!-- Cierre de la clase recent-orders -->
         </main>
         <!-- ========Final del contenido main ======== -->
@@ -118,8 +121,15 @@
         </div>
     </div> <!-- Cierre del div container --> 
 
+   <!-- bootscrap -->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Jquery--> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--DataTable--> 
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.bootscrap5.min.js"></script>
+    <!--Custom js-->
+    <script src="assets/js/main_reporte.js"></script>
     <script src="assets/js/index.js"></script>
-<script src="assets/js/tabla1.js"></script>
-<script src="assets/js/orders.js"></script>
 </body>
 </html>
