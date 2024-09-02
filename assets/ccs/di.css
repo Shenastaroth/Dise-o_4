@@ -349,7 +349,7 @@ main .recent-orders table{
 }
 
 main .recent-orders table:hover{
-    box-shadow: none;
+   box-shadow: none;
 }
 
 main table tbody td{
@@ -368,6 +368,67 @@ main .recent-orders a{
     margin: 1rem auto;
     color: var(--color-primary);
 }
+
+/* Estilos para la tabla reporte-ventas */
+#reporte-venta {
+    margin-top: 1.3rem;
+}
+
+#reporte-venta h2 {
+    margin-bottom: 0.8rem;
+}
+
+#reporte-venta table {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3rem ease;
+}
+
+#reporte-venta table:hover {
+    box-shadow: none;
+}
+
+#reporte-venta table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+#reporte-venta table tbody tr:last-child td {
+    border: none;
+}
+
+#reporte-venta a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+/* Estilos para centrar el botón */
+#load-data {
+    display: block; /* Para que el botón ocupe toda la fila */
+    margin: 1rem auto; /* Centra el botón horizontalmente */
+    padding: 0.8rem 1.2rem; /* Añade algo de espacio dentro del botón */
+    background-color: var(--color-primary); /* Cambia al color principal que estés usando */
+    color: var(--color-white); /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: var(--card-border-radius); /* Añade bordes redondeados */
+    text-align: center; /* Asegura que el texto esté centrado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    box-shadow: var(--box-shadow); /* Añade una sombra */
+    transition: all 0.3rem ease; /* Transición suave para hover */
+}
+
+#load-data:hover {
+    box-shadow: none; /* Quita la sombra al hacer hover */
+    background-color: var(--color-primary-dark); /* Cambia el color de fondo al hacer hover */
+}
+
 
 /* Introducimos el icono modo oscurro */
 .right-section{
