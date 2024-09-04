@@ -8,17 +8,45 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="assets/ccs/di.css">
+    <link rel="stylesheet" href="assets/ccs/nav.css">
 </head>
 <body>
+
+    <!-- ======== Sección de navegación ======== -->
+    <nav class="nav">
+        <!-- Logo y Nombre -->
+        <div class="logo_2">
+            <img src="assets/img/logo.png">
+            <h2>Nombre <span class="danger">HANA</span></h2>
+        </div>
+        
+        <!-- Botón de Menú -->
+        <button id="menu-btn">
+            <span class="material-icons-sharp">menu</span>
+        </button>
+        
+        <!-- Modo Oscuro -->
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+        <!-- Saludo y Foto de Perfil -->
+        <div class="profile">
+            <div class="info">
+                <p>Hey, <b>Usuario</b></p>
+                <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+                <img src="assets/img/bienvenido.png" alt="Profile Photo">
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <!-- ======== Barra lateral ======== -->
         <aside>
             <div class="toggle">
-                <div class="logo">
-                    <img src="assets/img/logo.png">
-                    <h2>Nombre <span class="danger">HANA</span></h2>
-                </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">login</span>
                 </div>
@@ -94,28 +122,6 @@
         <!-- ========Final del contenido main ======== -->
 
         <!-- ========Seccion derecha ======== -->
-        <div class="right-section">
-            <div class="nav">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">menu</span>
-                </button>
-                <div class="dark-mode">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Usuario</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="assets/img/bienvenido.png">
-                    </div>
-                </div>
-            </div>
-            <!-- ========Fin de la navegación ======== -->
-            <!-- Aquí puedes agregar widgets o información adicional -->
-        </div>
     </div> <!-- Cierre del div container --> 
 
     <script src="assets/js/index.js"></script>

@@ -9,17 +9,46 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="assets/ccs/di.css">
+    <link rel="stylesheet" href="assets/ccs/nav.css">
 </head>
 <body>
 
+    <!-- ======== Sección de navegación ======== -->
+    <nav class="nav">
+        <!-- Logo y Nombre -->
+        <div class="logo_2">
+            <img src="assets/img/logo.png">
+            <h2>Nombre <span class="danger">HANA</span></h2>
+        </div>
+        
+        <!-- Botón de Menú -->
+        <button id="menu-btn">
+            <span class="material-icons-sharp">menu</span>
+        </button>
+        
+        <!-- Modo Oscuro -->
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+        <!-- Saludo y Foto de Perfil -->
+        <div class="profile">
+            <div class="info">
+                <p>Hey, <b>Usuario</b></p>
+                <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+                <img src="assets/img/bienvenido.png" alt="Profile Photo">
+            </div>
+        </div>
+    </nav>
+    <!-- ======== Fin de la sección de navegación ======== -->
+
     <div class="container">
-          <!-- ======== Barra lateral ======== -->
-           <aside>
+        <!-- ======== Barra lateral ======== -->
+        <aside>
             <div class="toggle">
-                <div class="logo">
-                    <img src="assets/img/logo.png">
-                    <h2>Nombre <span class="danger">HANA</span></h2>
-                </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">login</span>
                 </div>
@@ -29,37 +58,30 @@
                     <span class="material-icons-sharp">dashboard</span>   
                     <h3>Panel de Control</h3>
                 </a>
-
                 <a href="accesos.html">
                     <span class="material-icons-sharp">build</span>   
                     <h3>Accesos</h3>
                 </a>
-
                 <a href="#">
                     <span class="material-icons-sharp">category</span>   
                     <h3>Categorias</h3>
                 </a>
-
                 <a href="#">
                     <span class="material-icons-sharp">production_quantity_limits</span>   
                     <h3>Productos</h3>
                 </a>
-
                 <a href="venta.html">
                     <span class="material-icons-sharp">real_estate_agent</span>   
                     <h3>Ventas</h3>
                 </a>
-
                 <a href="reporte_venta.html">
                     <span class="material-icons-sharp">report</span>   
                     <h3>Reporte de Ventas</h3>
                 </a>
-
                 <a href="#">
                     <span class="material-icons-sharp">settings</span>   
                     <h3>Configuracion</h3>
                 </a>
-
                 <a href="#">
                     <span class="material-icons-sharp">question_mark</span>   
                     <h3>Ayuda</h3>
@@ -69,16 +91,16 @@
                     <h3>Salir</h3>
                 </a>
             </div>
-           </aside>
-            <!-- ========Final de Barra lateral ======== -->
+        </aside>
+        <!-- ======== Final de Barra lateral ======== -->
 
-             <!-- ========Contenido Main ======== -->
-           <main>
+        <!-- ======== Contenido Main ======== -->
+        <main>
             <h1>Analisis</h1>
             <div class="analyse">
                 <div class="sales">
                     <div class="status">
-                         <div class="info">
+                        <div class="info">
                             <h3>Studens</h3>
                             <h1>1217</h1>
                         </div>
@@ -149,100 +171,79 @@
                         <canvas id="lineChart"></canvas>
                     </div>
                 </div>
-            
             </div>
-                         <!-- ========Final de grafica ======== -->
+            <!-- ======== Final de grafica ======== -->
 
-                         <!-- Tabla de pedidos recientes -->
+            <!-- ======== Tabla de pedidos recientes ======== -->
             <div class="recent-orders">
                 <h2>Vista</h2>
                 <table>
                     <thead>
-                        <tr>
-                        
-                        </tr>
+                        <tr></tr>
                     </thead>
                     <tbody></tbody>
                 </table>
                 <a href="#">Show All</a>
             </div>
-            <!-- La tabla de pedidos termina -->
+            <!-- ======== Fin de la tabla de pedidos ======== -->
+        </main>
+        <!-- ======== Final del contenido main ======== -->
 
-           </main>
-              <!-- ========Final del contenido main ======== -->
+        <!-- ======== Seccion derecha ======== -->
+        <div class="right-section">
+            <div class="perfil-usuario">
+                <div class="logo_2">
+                    <img src="assets/img/bienvenido.png">
+                    <h2>HAJIMEMASHITE</h2>
+                </div>
+            </div>
 
-                 <!-- ========Seccion derecho ======== -->
-                    <div class="right-section">
-                        <div class="nav">
-                            <button id="menu-btn">
-                                <span class="material-icons-sharp">menu</span>
-                            </button>
-                            <div class="dark-mode">
-                                <span class="material-icons-sharp active">light_mode</span>
-                                <span class="material-icons-sharp">dark_mode</span>
-                            </div>                            
-                            <div class="profile">
-                                <div class="info">
-                                    <p>Hey, <b>Usuario</b></p>
-                                    <small class="text-muted">Admin</small>
-                                </div>
-                                <div class="profile-photo">
-                                    <img src="assets/img/bienvenido.png">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ========Fin de la navegación ======== -->
-                         <div class="perfil-usuario">
-                            <div class="logo">
-                                <img src="assets/img/bienvenido.png">
-                                <h2>HAJIMEMASHITE</h2>
-                            </div>
-                         </div>
-                         <div class="recordatorios">
-                            <div class="header">
-                                <h2>Recordatorios</h2>
-                                <span class="material-icons-sharp">notifications_none</span>
-                            </div>
-                            <div class="notificaciones">
-                                <div class="icon">
-                                    <span class="material-icons-sharp">volume_up</span>
-                                </div>
-                                <div class="contenido">
-                                    <div class="info">
-                                        <h3>Taller</h3>
-                                        <small class="text-muted"></small>
-                                        8:00 AM - 12 PM
-                                    </div>
-                                    <span class="material-icons-sharp">more_vert</span>
-                                </div>
-                            </div>
-
-                            <div class="notificaciones deactive">
-                                <div class="icon">
-                                    <span class="material-icons-sharp">edit</span>
-                                </div>
-                                <div class="content">
-                                    <div class="info">
-                                        <h3>Taller</h3>
-                                        <small class="text-muted"></small>
-                                        8:00 AM - 12 PM
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="notificaciones add-reminder">
-                                <div>
-                               <span class="material-icons-sharp">add</span>
-                               <h3>Agregar</h3>
-                                </div>
-                            </div>
-                         </div>
+            <div class="recordatorios">
+                <div class="header">
+                    <h2>Recordatorios</h2>
+                    <span class="material-icons-sharp">notifications_none</span>
+                </div>
+                <div class="notificaciones">
+                    <div class="icon">
+                        <span class="material-icons-sharp">volume_up</span>
                     </div>
+                    <div class="contenido">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text-muted"></small>
+                            8:00 AM - 12 PM
+                        </div>
+                        <span class="material-icons-sharp">more_vert</span>
+                    </div>
+                </div>
+
+                <div class="notificaciones deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">edit</span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text-muted"></small>
+                            8:00 AM - 12 PM
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notificaciones add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Agregar</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======== Fin de la seccion derecha ======== -->
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="assets/js/chart1.js"></script>
-    <script src="assets/js/index.js"></script>    
+    <script src="assets/js/index.js"></script>
 
-    
 </body>
 </html>

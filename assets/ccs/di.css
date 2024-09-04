@@ -409,12 +409,12 @@ main .recent-orders a{
     color: var(--color-primary);
 }
 
-/* Estilos para centrar el botón */
+/* Estilos para centrar el botón cargar datos_reporte venta */
 #load-data {
     display: block; /* Para que el botón ocupe toda la fila */
     margin: 1rem auto; /* Centra el botón horizontalmente */
     padding: 0.8rem 1.2rem; /* Añade algo de espacio dentro del botón */
-    background-color: var(--color-primary); /* Cambia al color principal que estés usando */
+    background-color: var(--color-primary);
     color: var(--color-white); /* Color del texto del botón */
     border: none; /* Elimina el borde del botón */
     border-radius: var(--card-border-radius); /* Añade bordes redondeados */
@@ -430,48 +430,8 @@ main .recent-orders a{
 }
 
 
-/* Introducimos el icono modo oscurro */
-.right-section{
-    margin-top: 1.4rem;
-}
 
-.right-section .nav{
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
-}
-
-.right-section .nav button{
-    display: none;
-}
-
-.right-section .dark-mode{
-    background-color: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
-}
-
-.right-section .dark-mode span{
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-section .dark-mode span.active{
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: var(--border-radius-1);
-}
-
-/* Perfil */
+/* Perfil con el hajimemashite*/
 .right-section .nav .profile{
     display: flex;
     gap: 2rem;
@@ -641,120 +601,4 @@ main .recent-orders a{
     main table tbody tr td:first-child{
         display: none;
    }  
-}
-
-@media screen and (max-width: 768px) {
-    .container{
-        width: 100%;
-        grid-template-columns: 1fr;
-        padding: 0 var(--padding-1);
-    }
-
-    aside{
-        position: fixed;
-        background-color: var(--color-white);
-        width: 15rem;
-        z-index: 3;
-        box-shadow: 1rem 3rem 4rem var(--color-light);
-        height: 100vh;
-        left: -100%;
-        display: none;
-        animation: MostrarMenu 0.4s ease forwards;
-    }
-    @keyframes MostrarMenu {
-        to{
-            left: 0;
-        }
-    }
-
-    aside .logo{
-        margin-left: 1rem;
-    }
-
-    aside .logo h2{
-        display: inline;
-    }
-
-    aside .sidebar h3{
-        display: inline;
-    }
-    
-    aside .sidebar a{
-        width: 100%;
-        height: 3.4rem;
-    }
-
-    aside .sidebar a:last-child{
-        position: absolute;
-        bottom: 5rem;
-    }
-
-    aside .toggle .close{
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    main{
-        margin-top: 8rem;
-        padding: 0 1rem;
-    }
-    
-    main .graficos .cuadro{
-        flex-basis: 35%;
-    }
-
-    main .recent-orders{
-        position: relative;
-        margin: 3rem 0 0 0;
-        width: 100%;
-    }
-
-    main .recent-orders table{
-        width: 100%;
-        margin: 0;
-    }
-
-    .right-section{
-        width: 94%;
-        margin: 0 auto 4rem;
-    }
-
-    
-/* Barra de arriba */
-    .right-section .nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        align-items: center;
-        background-color: var(--color-white);
-        padding: 0 var(--padding-1);
-        height: 4.6rem;
-        width: 100%;
-        z-index: 2;
-        box-shadow: 0 1rem 1rem var(--color-light);
-        margin: 0;
-    }
-
-    .right-section .nav .dark-mode{
-        width: 4.4rem;
-        position: absolute;
-        left: 66%;
-    }
-/* Elimino el texto de bienvenida al usuario */
-    .right-section .profile .info{
-        display: none;
-    }
-
-    .right-section .nav button{
-        display: inline-block;
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--color-dark);
-        position: absolute;
-        left: 1rem;
-    }
-
-    .right-section .nav button span{
-        font-size: 2rem;
-    }
 }
