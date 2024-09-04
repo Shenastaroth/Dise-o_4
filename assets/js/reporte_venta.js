@@ -1,14 +1,12 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const reportTableBody = document.getElementById('report-table-body');
 
-    if (reportTableBody) {  // Asegúrate de que el elemento existe
-        const salesData = JSON.parse(localStorage.getItem('ventasData')) || [];
+    if (reportTableBody) {  
+        const reporteData = JSON.parse(localStorage.getItem('reporteData')) || [];
 
-        // Vaciar la tabla antes de llenarla con los datos nuevos
         reportTableBody.innerHTML = '';
 
-        salesData.forEach(sale => {
+        reporteData.forEach(sale => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${sale.firstName}</td>
@@ -23,4 +21,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
