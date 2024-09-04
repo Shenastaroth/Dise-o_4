@@ -1,70 +1,100 @@
-document.getElementById('add-btn').addEventListener('click', function () {
-    const firstName = document.getElementById('first-name').value;
-    const lastName = document.getElementById('last-name').value;
-    const username = document.getElementById('username').value;
+document.addEventListener('DOMContentLoaded', function () {
+    const ventasTableBody = document.querySelector('#ventas-table-body');
+    const ventaForm = document.querySelector('#venta-form');
 
-    if (firstName && lastName && username) {
-        addRowToTable(firstName, lastName, username);
-        saveDataToLocalStorage(firstName, lastName, username);
-        clearForm();
+    // Función para cargar datos desde localStorage y mostrarlos en la tabla
+    function loadData() {
+        const storedData = localStorage.getItem('ventasData');
+        if (storedData) {
+            const datosVentas = JSON.parse(storedData);
+            ventasTableBody.innerHTML = ''; // Limpiar la tabla existente
+            datosVentas.forEach((data, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${data.firstName}</td>
+                    <td>${data.lastName}</td>
+                    <td>${data.username}</td>
+                    <td>${data.country}</td>
+                    <td>${data.email}</td>
+                    <td>${data.purchaseDate}</td>
+                    <td>${data.amount}</td>
+                    <td>
+                        <button class="edit-btn" data-index="${index}">Editar</button>
+                        <button class="delete-btn" data-index="${index}">Eliminar</button>
+                    </td>
+                `;
+                ventasTableBody.appendChild(tr);
+            });
+        }
     }
+
+    // Función para actualizar el localStorage después de un cambio en la tabla
+    function updateLocalStorage() {
+        const rows = ventasTableBody.querySelectorAll('tr');
+        const updatedData = Array.from(rows).map(row => {
+            return {
+                firstName: row.cells[0].textContent,
+                lastName: row.cells[1].textContent,
+                username: row.cells[2].textContent,
+                country: row.cells[3].textContent,
+                email: row.cells[4].textContent,
+                purchaseDate: row.cells[5].textContent,
+                amount: row.cells[6].textContent
+            };
+        });
+        localStorage.setItem('ventasData', JSON.stringify(updatedData));
+    }
+
+    // Evento para agregar una nueva venta
+    ventaForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const newSale = {
+            firstName: document.querySelector('#first-name').value,
+            lastName: document.querySelector('#last-name').value,
+            username: document.querySelector('#username').value,
+            country: document.querySelector('#country').value,
+            email: document.querySelector('#email').value,
+            purchaseDate: document.querySelector('#purchase-date').value,
+            amount: document.querySelector('#amount').value
+        };
+
+        const datosVentas = JSON.parse(localStorage.getItem('ventasData')) || [];
+        datosVentas.push(newSale);
+        localStorage.setItem('ventasData', JSON.stringify(datosVentas));
+
+        loadData(); // Recargar la tabla después de agregar
+        ventaForm.reset(); // Limpiar el formulario
+    });
+
+    // Evento para eliminar una fila
+    ventasTableBody.addEventListener('click', function (e) {
+        if (e.target.classList.contains('delete-btn')) {
+            const index = e.target.getAttribute('data-index');
+            let datosVentas = JSON.parse(localStorage.getItem('ventasData'));
+            datosVentas.splice(index, 1); // Eliminar el elemento del array
+            localStorage.setItem('ventasData', JSON.stringify(datosVentas));
+            loadData(); // Recargar la tabla después de eliminar
+        }
+    });
+
+    // Evento para editar una fila
+    ventasTableBody.addEventListener('click', function (e) {
+        if (e.target.classList.contains('edit-btn')) {
+            const index = e.target.getAttribute('data-index');
+            let datosVentas = JSON.parse(localStorage.getItem('ventasData'));
+
+            const updatedSale = prompt("Ingresa los nuevos datos en formato: Nombre, Apellido, Usuario, País, Email, Fecha, Monto", `${datosVentas[index].firstName},${datosVentas[index].lastName},${datosVentas[index].username},${datosVentas[index].country},${datosVentas[index].email},${datosVentas[index].purchaseDate},${datosVentas[index].amount}`);
+            
+            if (updatedSale) {
+                const [firstName, lastName, username, country, email, purchaseDate, amount] = updatedSale.split(",");
+                datosVentas[index] = { firstName, lastName, username, country, email, purchaseDate, amount };
+                localStorage.setItem('ventasData', JSON.stringify(datosVentas));
+                loadData(); // Recargar la tabla después de editar
+            }
+        }
+    });
+
+    // Cargar datos al cargar la página
+    loadData();
 });
-
-function addRowToTable(firstName, lastName, username) {
-    const tableBody = document.getElementById('sales-table-body');
-    const row = document.createElement('tr');
-
-    row.innerHTML = `
-        <td>${firstName}</td>
-        <td>${lastName}</td>
-        <td>${username}</td>
-        <td>
-            <button class="edit-btn">Editar</button>
-            <button class="delete-btn">Eliminar</button>
-        </td>
-    `;
-
-    // Botón para editar
-    row.querySelector('.edit-btn').addEventListener('click', function () {
-        editRow(this);
-    });
-
-    // Botón para eliminar
-    row.querySelector('.delete-btn').addEventListener('click', function () {
-        deleteRow(this);
-    });
-
-    tableBody.appendChild(row);
-}
-
-function editRow(button) {
-    const row = button.closest('tr');
-    const firstName = row.children[0].textContent;
-    const lastName = row.children[1].textContent;
-    const username = row.children[2].textContent;
-
-    document.getElementById('first-name').value = firstName;
-    document.getElementById('last-name').value = lastName;
-    document.getElementById('username').value = username;
-
-    // Remueve la fila para reemplazarla
-    row.remove();
-}
-
-function deleteRow(button) {
-    const row = button.closest('tr');
-    row.remove();
-}
-
-function saveDataToLocalStorage(firstName, lastName, username) {
-    const salesData = JSON.parse(localStorage.getItem('salesData')) || [];
-    salesData.push({ firstName, lastName, username });
-    localStorage.setItem('salesData', JSON.stringify(salesData));
-}
-
-function clearForm() {
-    document.getElementById('first-name').value = '';
-    document.getElementById('last-name').value = '';
-    document.getElementById('username').value = '';
-}
-
