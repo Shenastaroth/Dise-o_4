@@ -42,4 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar datos cuando se haga clic en el botón
     loadDataButton.addEventListener('click', loadData);
+
+    // Cargar datos de ventas en la tabla del reporte (html_reporte.html)
+    const reportTableBody = document.getElementById('report-table-body');
+    if (reportTableBody) {  // Asegúrate de que el elemento existe
+        const salesData = JSON.parse(localStorage.getItem('ventasData')) || [];
+
+        salesData.forEach(sale => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${sale.firstName}</td>
+                <td>${sale.lastName}</td>
+                <td>${sale.username}</td>
+                <td>${sale.country}</td>
+                <td>${sale.email}</td>
+                <td>${sale.purchaseDate}</td>
+                <td>${sale.amount}</td>
+            `;
+            reportTableBody.appendChild(row);
+        });
+    }
 });

@@ -102,23 +102,33 @@
         <!-- ========Contenido Main ======== -->
         <main>
             <h2>Ventas</h2>
-                <!-- Tabla de reporte de ventas -->
-                <div class="recent-orders">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Nombre de Usuario</th>
-                                <th>Detalle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Las filas se agregarán dinámicamente con Java -->
-                        </tbody>
-                    </table>
-                </div> <!-- Cierre de la clase recent-orders -->
+        
+            <!-- Formulario para agregar nuevos datos -->
+            <div class="add-entry">
+                <input type="text" id="first-name" placeholder="Nombre">
+                <input type="text" id="last-name" placeholder="Apellido">
+                <input type="text" id="username" placeholder="Nombre de Usuario">
+                <button id="add-btn">Agregar</button>
+            </div>
+        
+            <!-- Tabla de ventas -->
+            <div class="recent-orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Nombre de Usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sales-table-body">
+                        <!-- Las filas se agregarán dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </main>
+        
         <!-- ========Final del contenido main ======== -->
 
         <!-- ========Seccion derecha ======== -->

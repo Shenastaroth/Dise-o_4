@@ -101,26 +101,23 @@
         <!-- ========Final de Barra lateral ======== -->
 
        <!-- ========Contenido Main ======== -->
-       <div id="reporte-venta">
+       <main>
         <h2>Reporte de Ventas</h2>
-        <table id="ventas-table">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                    <th>Country</th>
-                    <th>Email</th>
-                    <th>Purchase Date</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Los datos se llenarán automáticamente con JavaScript -->
-            </tbody>
-        </table>
-        <button id="load-data">Cargar Datos</button>
-    </div>
+        <div class="recent-orders">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Nombre de Usuario</th>
+                    </tr>
+                </thead>
+                <tbody id="report-table-body">
+                    <!-- Las filas se agregarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
         <!-- ========Final del contenido main ======== -->
 
             <!-- ========Fin de la navegación ======== -->
