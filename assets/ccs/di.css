@@ -146,10 +146,11 @@ aside .toggle .close{
     display: none;
 }
 
+/*  estilos para la barra de panel*/
 aside .sidebar{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    background-color: var(--color-background);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
     height: 88vh;
