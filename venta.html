@@ -64,7 +64,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     <span class="material-icons-sharp">dashboard</span>   
                     <h3>Panel de Control</h3>
                 </a>
-
                 <a href="accesos.html">
                     <span class="material-icons-sharp">build</span>   
                     <h3>Accesos</h3>
@@ -75,7 +74,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     <h3>Categorias</h3>
                 </a>
 
-                <a href="#">
+                <a href="producto.html">
                     <span class="material-icons-sharp">production_quantity_limits</span>   
                     <h3>Productos</h3>
                 </a>
@@ -108,9 +107,21 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- ========Final de Barra lateral ======== -->
 
         <!-- ========Contenido Main ======== -->
-        <main>
+         <div class="container_table">
+        
             <h2>Ventas</h2>
+            <form id="form">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="position" placeholder="Position">
+                <input type="text" id="office" placeholder="Office">
+                <input type="text" id="age" placeholder="Age">
+                <input type="text" id="star_date" placeholder="Start date">
+                <input type="text" id="salary" placeholder="Salary">
+                <button type="button" onclick="addRow()">Agregar</button>
+            </form>
+        
             <div class="recent-orders">
+                <main>
                 <table id="example" class="display" style="width:100%">
                     <thead>
                         <tr>
@@ -591,14 +602,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         </tr>
                     </tfoot>
                 </table>
-            
+            </main>
+            </div>
             </div>
             </div>
         
-        </main>
-        
+    </div>
         <!-- ========Final del contenido main ======== -->
-
         <!-- ========Seccion derecha ======== -->
     </div> <!-- Cierre del div container --> 
 

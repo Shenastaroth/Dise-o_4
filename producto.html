@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ccs/nav.css">
+    <link rel="stylesheet" href="assets/ccs/di.css">
+    <link rel="stylesheet" href="assets/ccs/product.css">
+</head>
+<body>
+ <!-- ======== Sección de navegación ======== -->
+ <nav class="nav">
+    <!-- Logo y Nombre -->
+    <div class="logo_2">
+        <img src="assets/img/logo.png">
+        <h2>Nombre <span class="danger">HANA</span></h2>
+    </div>
+    
+    <!-- Botón de Menú -->
+    <button id="menu-btn">
+        <span class="material-icons-sharp">menu</span>
+    </button>
+    
+    <!-- Modo Oscuro -->
+    <div class="dark-mode">
+        <span class="material-icons-sharp active">light_mode</span>
+        <span class="material-icons-sharp">dark_mode</span>
+    </div>
+    
+    <!-- Saludo y Foto de Perfil -->
+    <div class="profile">
+        <div class="info">
+            <p>Hey, <b>Usuario</b></p>
+            <small class="text-muted">Admin</small>
+        </div>
+        <div class="profile-photo">
+            <img src="assets/img/bienvenido.png" alt="Profile Photo">
+        </div>
+    </div>
+</nav>
+
+<div class="container"><!--Contendor para agrupar elementos-->
+    <!-- ======== Barra lateral ======== -->
+    <aside>
+        <div class="toggle">
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">login</span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="index.html">
+                <span class="material-icons-sharp">dashboard</span>   
+                <h3>Panel de Control</h3>
+            </a>
+            <a href="accesos.html">
+                <span class="material-icons-sharp">build</span>   
+                <h3>Accesos</h3>
+            </a>
+
+            <a href="#">
+                <span class="material-icons-sharp">category</span>   
+                <h3>Categorias</h3>
+            </a>
+
+            <a href="producto.html" class="active">
+                <span class="material-icons-sharp">production_quantity_limits</span>   
+                <h3>Productos</h3>
+            </a>
+
+            <a href="venta.html">
+                <span class="material-icons-sharp">real_estate_agent</span>   
+                <h3>Ventas</h3>
+            </a>
+
+            <a href="reporte_venta.html">
+                <span class="material-icons-sharp">report</span>   
+                <h3>Reporte de Ventas</h3>
+            </a>
+
+            <a href="#">
+                <span class="material-icons-sharp">settings</span>   
+                <h3>Configuracion</h3>
+            </a>
+
+            <a href="#">
+                <span class="material-icons-sharp">question_mark</span>   
+                <h3>Ayuda</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>   
+                <h3>Salir</h3>
+            </a>
+        </div>
+    </aside>
+
+    <div class="contenedor-producto">
+        <h1>Productos</h1>
+    <div class="productos-container">
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto2.png">
+            <h3>Arroz Costeño</h3>
+            <div class="precio">S/21.00</div>
+        </div>
+
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto3.png">
+            <h3>Primor</h3>
+            <div class="precio">S/9.00</div>
+        </div>
+
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto4.png">
+            <h3>Nestle</h3>
+            <div class="precio">S/15.00</div>
+        </div>
+
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto1.png">
+            <h3>Eco</h3>
+            <div class="precio">S/12.00</div>
+        </div>
+
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto5.png">
+            <h3>Opal</h3>
+            <div class="precio">S/9.50</div>
+        </div>
+
+        <div class="producto" data-name="p-1">
+            <img src="assets/img/producto6.png">
+            <h3>Clorox</h3>
+            <div class="precio">S/1.80</div>
+        </div>
+    </div>
+</div>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

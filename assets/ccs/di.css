@@ -46,13 +46,14 @@ html{
 }
 
 body{ 
- height: 100vh;
- font-family: 'poppins', sans-serif;
- font-size: 0.88rem;
- user-select: none;
- overflow-x: hidden;
- color: var(--color-dark);
- background-color: var(--color-background);
+    transition: opacity 0.5s ease;
+    height: 100vh;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
 }
 
 a{
@@ -370,6 +371,11 @@ main .recent-orders a{
     color: var(--color-primary);
 }
 
+.container_table{
+    position: relative;
+    left: 8rem;
+}
+
 /* Estilos para la tabla reporte-ventas */
 #reporte-venta {
     margin-top: 1.3rem;
@@ -410,28 +416,15 @@ main .recent-orders a{
     color: var(--color-primary);
 }
 
-/* Estilos para centrar el botón cargar datos_reporte venta */
-#load-data {
-    display: block; /* Para que el botón ocupe toda la fila */
-    margin: 1rem auto; /* Centra el botón horizontalmente */
-    padding: 0.8rem 1.2rem; /* Añade algo de espacio dentro del botón */
-    background-color: var(--color-primary);
-    color: var(--color-white); /* Color del texto del botón */
-    border: none; /* Elimina el borde del botón */
-    border-radius: var(--card-border-radius); /* Añade bordes redondeados */
-    text-align: center; /* Asegura que el texto esté centrado */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    box-shadow: var(--box-shadow); /* Añade una sombra */
-    transition: all 0.3rem ease; /* Transición suave para hover */
+#form{
+    background-color: var(--color-background);
+    padding: 2rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: 8px;
+    width: 100%;
+    max-width: 400px;
+
 }
-
-#load-data:hover {
-    box-shadow: none; /* Quita la sombra al hacer hover */
-    background-color: var(--color-primary-dark); /* Cambia el color de fondo al hacer hover */
-}
-
-
-
 /* Perfil con el hajimemashite*/
 .right-section .nav .profile{
     display: flex;
