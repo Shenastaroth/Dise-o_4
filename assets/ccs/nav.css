@@ -62,8 +62,8 @@ nav button{
 nav .dark-mode {
     background-color: var(--color-light);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     height: 1.6rem;
     width: 4.2rem;
     cursor: pointer;
@@ -137,7 +137,7 @@ nav .dark-mode span.active {
 
     aside .sidebar a:last-child{
         position: absolute;
-        bottom: 5rem;
+        bottom: 5rem;   
     }
 
     aside .toggle .close{

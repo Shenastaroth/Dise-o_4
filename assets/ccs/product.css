@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 *{
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -12,15 +34,10 @@
     text-transform: capitalize;/* convierte en mayusculas la primera letra de un texto*/
 }
 
-.contenedor-producto{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
 
-}
-
-.contenedor-producto .productos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Corrección aquí */
-    gap: 2rem;
+.contenedor-product{
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  display: flex;  
 }
