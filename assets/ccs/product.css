@@ -40,4 +40,28 @@
   padding: 10px;
   margin: auto;
   display: flex;  
+  justify-content: space-between;
+  /*oculta lo que esta fuera del contenedor*/
+  contain: paint;
+}
+
+.contenedor-product .contenedor-items{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  grid-row-gap: 20px;
+  width: 100%;
+  transition: .3s;
+}
+
+.contenedor-product .contenedor-items .item{
+  max-width: 200px;
+  padding: 10px;
+  margin: auto;
+  border: 1px var(--border-radius-1);
+}
+
+.contenedor-items .item .img-product{
+  width: 100%;
 }
